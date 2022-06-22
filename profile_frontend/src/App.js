@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 
-import logo from "./logo.svg";
 import Navigation from "./routes/navigation/navigation.component";
 import Home from "./routes/home/home.component";
 
