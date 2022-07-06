@@ -1,20 +1,20 @@
-import { gql } from "@apollo/client";
-export const Graphql_Query = (value) => {
-    return gql`
-        {
-            profileId(id: ${value}) {
-                id
-                name {
-                    first_name
-                    last_name
-                }
-                location {
-                    state
-                    city
-                    zip_code
-                }
-                email
+import gql from "graphql-tag";
+
+export const GET_PROFILE_BY_ID = gql`
+    query findProfiles($id: ID!) {
+        profileId(id: $id) {
+            id
+            name {
+                first_name
+                last_name
             }
+            location {
+                state
+                city
+                zip_code
+            }
+            email
+            description
         }
-    `;
-};
+    }
+`;
