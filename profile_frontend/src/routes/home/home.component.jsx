@@ -1,34 +1,65 @@
-import { gql, useQuery } from "@apollo/client";
-import { useEffect, useState } from "react";
-import { GET_PROFILE_BY_ID } from "../../client/profileQuerys";
+import { useContext, useEffect, useState } from "react";
+import { Card } from "react-bootstrap";
+import TypeAnimation from "react-type-animation";
+import { ProfileContext } from "../../contexts/profile.context";
+
+import "./home.style.css";
 
 const Home = () => {
-    const { data, loading, error } = useQuery(GET_PROFILE_BY_ID, {
-        variables: {
-            id: "jeremy498081",
-        },
-    });
+    const { fullName } = useContext(ProfileContext);
+    const { first_name, last_name } = fullName;
 
-    useEffect(() => {
-        if (data) {
-            const {
-                profileId: { name },
-            } = data;
-
-            setFullName(name);
-        }
-    }, [data]);
-
-    const [fullName, setFullName] = useState({});
-
-    if (loading) return "Loading...";
-    if (error) return <pre>{error.message}</pre>;
     return (
-        <>
-            <h1>
-                {fullName.first_name} {fullName.last_name}
-            </h1>
-        </>
+        <div align="right">
+            <div className="img-1">
+                <Card className="hcard">
+                    <span className="space"></span>
+
+                    <div className="c">
+                        <Card className="clear">
+                            <Card.Img
+                                // src={require("./../../assets/me.jpeg")}
+                                className="pic"
+                            />
+                            <span className="sp"></span>
+
+                            <h1 className="text">
+                                <span className="a">{first_name}</span>{" "}
+                                <span className="n">{last_name}</span>{" "}
+                            </h1>
+
+                            <h4 className="type">
+                                <div>
+                                    <TypeAnimation
+                                        cursor={true}
+                                        sequence={[
+                                            "Software Developer",
+                                            2000,
+                                            "",
+                                            500,
+                                            "Programmer",
+                                            2000,
+                                            "",
+                                            500,
+                                            "Tennis Player",
+                                            2000,
+                                            "",
+                                            500,
+                                            "Father",
+                                            2000,
+                                            "",
+                                            500,
+                                        ]}
+                                        wrapper="h2"
+                                        repeat={Infinity}
+                                    />
+                                </div>
+                            </h4>
+                        </Card>
+                    </div>
+                </Card>
+            </div>
+        </div>
     );
 };
 
