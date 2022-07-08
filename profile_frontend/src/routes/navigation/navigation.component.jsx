@@ -6,7 +6,6 @@ const Navigation = () => {
     return (
         <>
             <Navbar className="home">
-                <h1>Jeremy Elam</h1>
                 <Card className="card">
                     <Card.Img
                         // src ={}
@@ -16,6 +15,8 @@ const Navigation = () => {
                     <Card.Body>
                         <Card.Text>
                             <ListGroup variant="flush">
+                                <div className="space"></div>
+
                                 <ListGroupItem className="list">
                                     <span
                                         className="link"
@@ -26,6 +27,7 @@ const Navigation = () => {
                                         Home
                                     </span>
                                 </ListGroupItem>
+                                <div className="space"></div>
 
                                 <ListGroupItem className="list">
                                     <span
@@ -37,6 +39,8 @@ const Navigation = () => {
                                         About
                                     </span>
                                 </ListGroupItem>
+                                <div className="space"></div>
+
                                 <ListGroupItem className="list">
                                     <span
                                         className="link"
@@ -47,6 +51,8 @@ const Navigation = () => {
                                         Portfolio
                                     </span>
                                 </ListGroupItem>
+                                <div className="space"></div>
+
                                 <ListGroupItem className="list">
                                     <span
                                         className="link"
