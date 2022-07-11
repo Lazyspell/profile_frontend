@@ -10,19 +10,28 @@ export const AnimatedSphere = () => {
         "HTML",
         "React",
         "Python",
-        "Java",
-        "git",
-        "django",
+        "Pandas",
+        "Tensorflow",
+        "GO",
+        "Git",
+        "Flask",
         "Node.js",
         "OpenCV",
-        "MySQL",
-        "jQuery",
+        "SQL",
+        "NoSQL",
+        "PostgresDB",
+        "MongoDB",
+        "REST",
+        "GraphQL",
+        "Digital Ocean",
+        "AWS",
+        "Azure",
     ];
 
     useEffect(() => {
         TagCloud(".content", myTags, {
             // radius in px
-            radius: 100,
+            radius: 200,
             // animation speed
             // slow, normal, fast
             maxSpeed: "fast",
