@@ -1,6 +1,6 @@
-.home {
+.navi-bar {
     height: 100%;
-    width: 20%;
+    width: 10%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -38,7 +38,7 @@
 }
 
 .link:hover {
-    color: red;
+    color: rgb(102, 53, 148);
     text-decoration: none;
     cursor: pointer;
 }
