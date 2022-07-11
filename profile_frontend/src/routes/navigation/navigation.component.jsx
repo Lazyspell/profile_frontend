@@ -1,4 +1,7 @@
 import { Navbar, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./navigation.css";
 
@@ -14,10 +17,17 @@ const Navigation = () => {
                     />
                     <Card.Body>
                         <Card.Text>
-                            <ListGroup variant="flush">
+                            <ListGroup variant="flush" className="navi-bar">
                                 <div className="space"></div>
 
                                 <ListGroupItem className="list">
+                                    <FontAwesomeIcon
+                                        icon={faHome}
+                                        className="link"
+                                        onClick={() => {
+                                            console.log("home");
+                                        }}
+                                    />
                                     <span
                                         className="link"
                                         onClick={() => {
@@ -27,9 +37,10 @@ const Navigation = () => {
                                         Home
                                     </span>
                                 </ListGroupItem>
-                                <div className="space"></div>
 
                                 <ListGroupItem className="list">
+                                    <i className="fak fa-user-visor-duotone"></i>
+
                                     <span
                                         className="link"
                                         onClick={() => {
@@ -39,7 +50,6 @@ const Navigation = () => {
                                         About
                                     </span>
                                 </ListGroupItem>
-                                <div className="space"></div>
 
                                 <ListGroupItem className="list">
                                     <span
@@ -51,9 +61,9 @@ const Navigation = () => {
                                         Portfolio
                                     </span>
                                 </ListGroupItem>
-                                <div className="space"></div>
 
                                 <ListGroupItem className="list">
+                                    <FontAwesomeIcon icon="fa-brands fa-github" />
                                     <span
                                         className="link"
                                         onClick={() => {
@@ -68,6 +78,7 @@ const Navigation = () => {
                     </Card.Body>
                 </Card>
             </Navbar>
+            <Outlet />
         </>
     );
 };
