@@ -2,8 +2,20 @@ import { Navbar, Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    solid,
+    thin,
+    regular,
+    brands,
+    duotone,
+} from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
 
 import "./navigation.css";
+
+const home = " Home";
+const about = " About";
+const portfolio = " Portfolio";
+const contact = " Contact";
 
 const Navigation = () => {
     return (
@@ -34,43 +46,63 @@ const Navigation = () => {
                                             console.log("home");
                                         }}
                                     >
-                                        Home
+                                        {home}
                                     </span>
                                 </ListGroupItem>
 
                                 <ListGroupItem className="list">
-                                    <i className="fak fa-user-visor-duotone"></i>
-
+                                    <FontAwesomeIcon
+                                        icon={duotone("user-bounty-hunter")}
+                                        className="link"
+                                        onClick={() => {
+                                            console.log("This is the way");
+                                        }}
+                                    />
                                     <span
                                         className="link"
                                         onClick={() => {
                                             console.log("About");
                                         }}
                                     >
-                                        About
+                                        {about}
                                     </span>
                                 </ListGroupItem>
 
                                 <ListGroupItem className="list">
+                                    <FontAwesomeIcon
+                                        icon={solid("book-journal-whills")}
+                                        className="link"
+                                        onClick={() => {
+                                            console.log(
+                                                "May the force be with you"
+                                            );
+                                        }}
+                                    />
                                     <span
                                         className="link"
                                         onClick={() => {
                                             console.log("Portfolio");
                                         }}
                                     >
-                                        Portfolio
+                                        {portfolio}
                                     </span>
                                 </ListGroupItem>
 
                                 <ListGroupItem className="list">
-                                    <FontAwesomeIcon icon="fa-brands fa-github" />
+                                    <FontAwesomeIcon
+                                        icon={solid("alien-8bit")}
+                                        className="link"
+                                        onClick={() => {
+                                            console.log("Contact");
+                                        }}
+                                    />
                                     <span
                                         className="link"
                                         onClick={() => {
                                             console.log("Contact");
                                         }}
                                     >
-                                        Contact
+                                        {contact}
                                     </span>
                                 </ListGroupItem>
                             </ListGroup>
