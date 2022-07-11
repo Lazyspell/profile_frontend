@@ -3,14 +3,14 @@ import { Card } from "react-bootstrap";
 import TypeAnimation from "react-type-animation";
 import { ProfileContext } from "../../contexts/profile.context";
 
-import "./home.style.css";
+// import "./home.style.css";
 
 const Home = () => {
     const { fullName } = useContext(ProfileContext);
     const { first_name, last_name } = fullName;
 
     return (
-        <div align="right">
+        <div align="center">
             <div className="img-1">
                 <Card className="hcard">
                     <span className="space"></span>
