@@ -18,7 +18,7 @@ const Home = () => {
                     <div className="c">
                         <Card className="clear">
                             <Card.Img
-                                // src={require("./../../assets/me.jpeg")}
+                                // src="https://i.ibb.co/qymfPT2/IMG-2688.jpg"
                                 className="pic"
                             />
                             <span className="sp"></span>
