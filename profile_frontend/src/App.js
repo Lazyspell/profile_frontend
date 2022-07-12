@@ -10,7 +10,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Navigation />}>
                 <Route index element={<Home />} />
-                <Route path="/checkout" element={<AnimatedSphere />} />
+                <Route path="/animation" element={<AnimatedSphere />} />
             </Route>
         </Routes>
     );
