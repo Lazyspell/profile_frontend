@@ -1,6 +1,6 @@
 .navi-bar {
     height: 100%;
-    width: 10%;
+    width: 12.5%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -45,4 +45,8 @@
 
 .li {
     border: none;
+}
+
+.spacing {
+    height: 40rem;
 }
