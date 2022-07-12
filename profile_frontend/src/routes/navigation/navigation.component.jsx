@@ -32,132 +32,118 @@ const Navigation = () => {
     return (
         <>
             <Navbar className="home">
-                <Card className="card">
-                    <Card.Img
-                        // src ={}
-                        variant="top"
-                        className="sig"
-                    />
-                    <Card.Body>
-                        <Card.Text>
-                            <ListGroup variant="flush" className="navi-bar">
-                                <div className="space"></div>
+                <ListGroup variant="flush" className="navi-bar">
+                    <div className="placeholder"></div>
 
-                                <ListGroupItem className="list">
-                                    <FontAwesomeIcon
-                                        icon={faHome}
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("home");
-                                        }}
-                                    />
-                                    <span
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("home");
-                                        }}
-                                    >
-                                        {home}
-                                    </span>
-                                </ListGroupItem>
+                    <ListGroupItem className="list">
+                        <FontAwesomeIcon
+                            icon={faHome}
+                            className="link"
+                            onClick={() => {
+                                console.log("home");
+                            }}
+                        />
+                        <span
+                            className="link"
+                            onClick={() => {
+                                console.log("home");
+                            }}
+                        >
+                            {home}
+                        </span>
+                    </ListGroupItem>
+                    <ListGroupItem className="list">
+                        <FontAwesomeIcon
+                            icon={duotone("user-bounty-hunter")}
+                            className="link"
+                            onClick={() => {
+                                console.log("This is the way");
+                            }}
+                        />
+                        <span
+                            className="link"
+                            onClick={() => {
+                                console.log("About");
+                            }}
+                        >
+                            {about}
+                        </span>
+                    </ListGroupItem>
+                    <ListGroupItem className="list">
+                        <FontAwesomeIcon
+                            icon={regular("sword-laser")}
+                            className="link"
+                            onClick={() => {
+                                console.log("This is the way");
+                            }}
+                        />
+                        <span
+                            className="link"
+                            onClick={() => {
+                                console.log("About");
+                            }}
+                        >
+                            {skills}
+                        </span>
+                    </ListGroupItem>
 
-                                <ListGroupItem className="list">
-                                    <FontAwesomeIcon
-                                        icon={duotone("user-bounty-hunter")}
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("This is the way");
-                                        }}
-                                    />
-                                    <span
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("About");
-                                        }}
-                                    >
-                                        {about}
-                                    </span>
-                                </ListGroupItem>
-                                <ListGroupItem className="list">
-                                    <FontAwesomeIcon
-                                        icon={regular("sword-laser")}
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("This is the way");
-                                        }}
-                                    />
-                                    <span
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("About");
-                                        }}
-                                    >
-                                        {skills}
-                                    </span>
-                                </ListGroupItem>
+                    <ListGroupItem className="list">
+                        <FontAwesomeIcon
+                            icon={solid("book-journal-whills")}
+                            className="link"
+                            onClick={() => {
+                                console.log("May the force be with you");
+                            }}
+                        />
+                        <span
+                            className="link"
+                            onClick={() => {
+                                console.log("Portfolio");
+                            }}
+                        >
+                            {portfolio}
+                        </span>
+                    </ListGroupItem>
 
-                                <ListGroupItem className="list">
-                                    <FontAwesomeIcon
-                                        icon={solid("book-journal-whills")}
-                                        className="link"
-                                        onClick={() => {
-                                            console.log(
-                                                "May the force be with you"
-                                            );
-                                        }}
-                                    />
-                                    <span
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("Portfolio");
-                                        }}
-                                    >
-                                        {portfolio}
-                                    </span>
-                                </ListGroupItem>
+                    <ListGroupItem className="list">
+                        <FontAwesomeIcon
+                            icon={solid("alien-8bit")}
+                            className="link"
+                            onClick={() => {
+                                console.log("Contact");
+                            }}
+                        />
+                        <span
+                            className="link"
+                            onClick={() => {
+                                console.log("Contact");
+                            }}
+                        >
+                            {contact}
+                        </span>
+                    </ListGroupItem>
+                    <div className="spacing"></div>
 
-                                <ListGroupItem className="list">
-                                    <FontAwesomeIcon
-                                        icon={solid("alien-8bit")}
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("Contact");
-                                        }}
-                                    />
-                                    <span
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("Contact");
-                                        }}
-                                    >
-                                        {contact}
-                                    </span>
-                                </ListGroupItem>
-                                <div className="spacing"></div>
-
-                                <ListGroupItem className="list">
-                                    <FontAwesomeIcon
-                                        icon={brands("linkedin")}
-                                        className="link"
-                                        onClick={navigateToLinkedIn}
-                                    />
-                                    {"   "}
-                                    <FontAwesomeIcon
-                                        icon={brands("github")}
-                                        className="link"
-                                        onClick={navigateToGit}
-                                    />
-                                    {"   "}
-                                    <FontAwesomeIcon
-                                        icon={brands("discord")}
-                                        className="link"
-                                        onClick={navigateToDiscord}
-                                    />
-                                </ListGroupItem>
-                            </ListGroup>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
+                    <ListGroupItem className="list">
+                        <FontAwesomeIcon
+                            icon={brands("linkedin")}
+                            className="link"
+                            onClick={navigateToLinkedIn}
+                        />
+                        {"   "}
+                        <FontAwesomeIcon
+                            icon={brands("github")}
+                            className="link"
+                            onClick={navigateToGit}
+                        />
+                        {"   "}
+                        <FontAwesomeIcon
+                            icon={brands("discord")}
+                            className="link"
+                            onClick={navigateToDiscord}
+                        />
+                    </ListGroupItem>
+                </ListGroup>
             </Navbar>
             <Outlet />
         </>
