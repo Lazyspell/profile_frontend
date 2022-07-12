@@ -4,7 +4,6 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     solid,
-    thin,
     regular,
     brands,
     duotone,
@@ -16,8 +15,20 @@ const home = " Home";
 const about = " About";
 const portfolio = " Portfolio";
 const contact = " Contact";
+const skills = " Skills";
 
 const Navigation = () => {
+    const navigateToGit = () => {
+        window.open("https://github.com/lazyspell");
+    };
+
+    const navigateToLinkedIn = () => {
+        window.open("https://linkedin.com/in/jeremy-elam-7a5480102");
+    };
+
+    const navigateToDiscord = () => {
+        window.open("https://discord.gg/9CKfr9jQnd");
+    };
     return (
         <>
             <Navbar className="home">
@@ -67,6 +78,23 @@ const Navigation = () => {
                                         {about}
                                     </span>
                                 </ListGroupItem>
+                                <ListGroupItem className="list">
+                                    <FontAwesomeIcon
+                                        icon={regular("sword-laser")}
+                                        className="link"
+                                        onClick={() => {
+                                            console.log("This is the way");
+                                        }}
+                                    />
+                                    <span
+                                        className="link"
+                                        onClick={() => {
+                                            console.log("About");
+                                        }}
+                                    >
+                                        {skills}
+                                    </span>
+                                </ListGroupItem>
 
                                 <ListGroupItem className="list">
                                     <FontAwesomeIcon
@@ -104,6 +132,27 @@ const Navigation = () => {
                                     >
                                         {contact}
                                     </span>
+                                </ListGroupItem>
+                                <div className="spacing"></div>
+
+                                <ListGroupItem className="list">
+                                    <FontAwesomeIcon
+                                        icon={brands("linkedin")}
+                                        className="link"
+                                        onClick={navigateToLinkedIn}
+                                    />
+                                    {"   "}
+                                    <FontAwesomeIcon
+                                        icon={brands("github")}
+                                        className="link"
+                                        onClick={navigateToGit}
+                                    />
+                                    {"   "}
+                                    <FontAwesomeIcon
+                                        icon={brands("discord")}
+                                        className="link"
+                                        onClick={navigateToDiscord}
+                                    />
                                 </ListGroupItem>
                             </ListGroup>
                         </Card.Text>
