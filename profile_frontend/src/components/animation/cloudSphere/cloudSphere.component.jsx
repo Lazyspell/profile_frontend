@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import TagCloud from "TagCloud";
 
-import "./cloudSphere.animation.css";
+import "./cloudSphere.animation.scss";
 
 export const AnimatedSphere = () => {
     const myTags = [

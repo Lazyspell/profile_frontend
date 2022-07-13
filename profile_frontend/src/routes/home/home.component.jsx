@@ -3,7 +3,7 @@ import { TextAnimation } from "../../components/animation/textAnimation/text.ani
 import { ProfileContext } from "../../contexts/profile.context";
 import Button from "react-bootstrap/Button";
 
-import "./home.style.css";
+import "./home.style.scss";
 
 const Home = () => {
     const { fullName } = useContext(ProfileContext);

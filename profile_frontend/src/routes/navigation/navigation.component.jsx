@@ -9,13 +9,13 @@ import {
     duotone,
 } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
 
-import "./navigation.css";
+import "./navigation.scss";
 
 const home = " Home";
 const about = " About";
-const portfolio = " Portfolio";
+const portfolio = " Work";
 const contact = " Contact";
-const skills = " Skills";
+const skills = " My Skills";
 
 const Navigation = () => {
     const navigateToGit = () => {

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import "./text.style.css";
+import "./text.style.scss";
 
 export const TextAnimation = () => {
     const el = useRef(null);
