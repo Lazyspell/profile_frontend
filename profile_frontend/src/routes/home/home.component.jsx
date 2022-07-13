@@ -1,63 +1,33 @@
 import { useContext, useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
-import TypeAnimation from "react-type-animation";
+import { TextAnimation } from "../../components/animation/textAnimation/text.animation";
 import { ProfileContext } from "../../contexts/profile.context";
+import Button from "react-bootstrap/Button";
 
-// import "./home.style.css";
+import "./home.style.css";
 
 const Home = () => {
     const { fullName } = useContext(ProfileContext);
     const { first_name, last_name } = fullName;
 
     return (
-        <div align="center">
-            <div className="img-1">
-                <Card className="hcard">
-                    <span className="space"></span>
-
-                    <div className="c">
-                        <Card className="clear">
-                            <Card.Img
-                                // src="https://i.ibb.co/qymfPT2/IMG-2688.jpg"
-                                className="pic"
-                            />
-                            <span className="sp"></span>
-
-                            <h1 className="text">
-                                <span className="a">{first_name}</span>{" "}
-                                <span className="n">{last_name}</span>{" "}
-                            </h1>
-
-                            <h4 className="type">
-                                <div>
-                                    <TypeAnimation
-                                        cursor={true}
-                                        sequence={[
-                                            "Software Developer",
-                                            2000,
-                                            "",
-                                            500,
-                                            "Programmer",
-                                            2000,
-                                            "",
-                                            500,
-                                            "Tennis Player",
-                                            2000,
-                                            "",
-                                            500,
-                                            "Father",
-                                            2000,
-                                            "",
-                                            500,
-                                        ]}
-                                        wrapper="h2"
-                                        repeat={Infinity}
-                                    />
-                                </div>
-                            </h4>
-                        </Card>
-                    </div>
-                </Card>
+        <div className="home-container">
+            <div className="name">
+                <h1 className="text">
+                    <span className="a">Hi,</span>
+                </h1>
+                <h1 className="text">
+                    <span className="a">I am</span>
+                </h1>
+                <h1 className="text">
+                    <span className="a">{first_name}</span>{" "}
+                    <span className="n">{last_name}</span>{" "}
+                </h1>
+                <h1 className="type">
+                    <TextAnimation />
+                </h1>
+                <Button variant="outline-primary" size="lg">
+                    Contact Me
+                </Button>{" "}
             </div>
         </div>
     );
