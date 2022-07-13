@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { TextAnimation } from "../../components/animation/textAnimation/text.animation";
 import { ProfileContext } from "../../contexts/profile.context";
-import Button from "react-bootstrap/Button";
+import { Button } from "../../components/button/button.component";
 
 import "./home.style.scss";
 
@@ -25,9 +25,7 @@ const Home = () => {
                 <h1 className="type">
                     <TextAnimation />
                 </h1>
-                <Button variant="outline-primary" size="lg">
-                    Contact Me
-                </Button>{" "}
+                <Button> Contact Me </Button>
             </div>
         </div>
     );
