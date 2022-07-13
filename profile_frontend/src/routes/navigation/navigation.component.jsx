@@ -33,7 +33,7 @@ const Navigation = () => {
         <>
             <Navbar className="home">
                 <ListGroup variant="flush" className="navi-bar">
-                    <div className="placeholder"></div>
+                    <div className="nav-space"></div>
 
                     <ListGroupItem className="list">
                         <FontAwesomeIcon
