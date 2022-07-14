@@ -4,6 +4,7 @@ import { ProfileContext } from "../../contexts/profile.context";
 import { Button } from "../../components/button/button.component";
 
 import "./home.style.scss";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const { fullName } = useContext(ProfileContext);
@@ -25,7 +26,9 @@ const Home = () => {
                 <h1 className="type">
                     <TextAnimation />
                 </h1>
-                <Button> Contact Me </Button>
+                <Link className="nav-link" to="/contact">
+                    <Button> Contact Me </Button>
+                </Link>
             </div>
         </div>
     );
