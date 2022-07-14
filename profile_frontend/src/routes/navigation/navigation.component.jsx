@@ -2,6 +2,7 @@ import { Navbar, Card, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Popup from "reactjs-popup";
 import {
     solid,
     regular,
@@ -56,21 +57,22 @@ const Navigation = () => {
                     </ListGroupItem>
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/about">
-                            <FontAwesomeIcon
-                                icon={duotone("user-bounty-hunter")}
-                                className="link"
-                                onClick={() => {
-                                    console.log("This is the way");
-                                }}
-                            />
-                            <span
-                                className="link"
-                                onClick={() => {
-                                    console.log("About");
-                                }}
+                            <Popup
+                                trigger={
+                                    <FontAwesomeIcon
+                                        icon={duotone("user-bounty-hunter")}
+                                        className="link"
+                                        onClick={() => {
+                                            console.log("This is the way");
+                                        }}
+                                    />
+                                }
+                                position="top left"
+                                nested
                             >
-                                {about}
-                            </span>
+                                This is the way
+                            </Popup>
+                            <span className="link">{about}</span>
                         </Link>
                     </ListGroupItem>
                     <ListGroupItem className="list">
