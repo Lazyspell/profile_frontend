@@ -3,10 +3,17 @@
     font-size: 20px;
     font-weight: 650;
     color: #1c0069;
+    text-shadow: 2px 2px 4px #000000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .tagcloud--item:hover {
     color: white;
+}
+
+@media (forced-colors: active) {
+    .tagcloud {
+        color: #1c0069;
+    }
 }
