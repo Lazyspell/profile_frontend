@@ -31,7 +31,7 @@ export const AnimatedSphere = () => {
     useEffect(() => {
         TagCloud(".content", myTags, {
             // radius in px
-            radius: 200,
+            radius: 325,
             // animation speed
             // slow, normal, fast
             maxSpeed: "fast",
@@ -55,7 +55,7 @@ export const AnimatedSphere = () => {
     return (
         <>
             <div>
-                <span className="content"></span>;
+                <span className="content"></span>
             </div>
         </>
     );
