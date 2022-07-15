@@ -56,7 +56,7 @@ const Navigation = () => {
                         </Link>
                     </ListGroupItem>
                     <ListGroupItem className="list">
-                        <Link className="nav-link" to="/about">
+                        <Link className="nav-link" to="/about" color="black">
                             <Popup
                                 trigger={
                                     <FontAwesomeIcon

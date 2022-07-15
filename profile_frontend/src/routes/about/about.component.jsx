@@ -13,7 +13,7 @@ export const About = () => {
 
                 <div class="split right">
                     <div class="centered">
-                        <AnimatedSphere />
+                        <AnimatedSphere class="test" />
                     </div>
                 </div>
             </div>
