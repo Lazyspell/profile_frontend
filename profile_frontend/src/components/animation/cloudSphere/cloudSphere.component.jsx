@@ -54,7 +54,7 @@ export const AnimatedSphere = () => {
 
     return (
         <>
-            <div>
+            <div className="cloudSphere-container ">
                 <span className="content"></span>
             </div>
         </>
