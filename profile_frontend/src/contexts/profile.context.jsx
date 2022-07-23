@@ -4,41 +4,68 @@ import { useQuery } from "@apollo/client";
 import { GET_PROFILE_BY_ID } from "../client/profileQuery";
 
 export const ProfileContext = createContext({
-    fullName: {},
+    first_name: "",
+    last_name: "",
+    dob: {},
     location: {},
-    email: "",
-    profileId: "",
+    skills: [],
+    projects: [],
+    contact: {},
+    experience: [],
 });
 
 export const ProfileProvider = ({ children }) => {
     const { data, loading, error } = useQuery(GET_PROFILE_BY_ID, {
         variables: {
-            id: "jeremy498081",
+            email: "jelam2975@gmail.com",
         },
     });
+
+    console.log(data);
     useEffect(() => {
         if (data) {
             const {
-                profileId: { name },
+                profileId: {
+                    first_name,
+                    last_name,
+                    dob,
+                    location,
+                    skills,
+                    projects,
+                    contact,
+                    experience,
+                },
             } = data;
 
-            setFullName(name);
+            setFirstName(first_name);
+            setLastName(last_name);
+            setDOB(dob);
             setLocation(location);
-            setEmail(email);
-            setProfileId(profileId);
+            setSkills(skills);
+            setProjects(projects);
+            setContact(contact);
+            setExperience(experience);
         }
     }, [data]);
 
-    const [fullName, setFullName] = useState({});
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [dob, setDOB] = useState("");
     const [location, setLocation] = useState({});
-    const [email, setEmail] = useState("");
-    const [profileId, setProfileId] = useState("");
+    const [skills, setSkills] = useState([]);
+    const [projects, setProjects] = useState([]);
+    const [contact, setContact] = useState({});
+    const [experience, setExperience] = useState([]);
 
     const value = {
-        fullName,
+        firstName,
+        lastName,
+        dob,
         location,
-        email,
-        profileId,
+        skills,
+        projects,
+        contact,
+        experience,
     };
 
     if (loading) return "Loading...";
