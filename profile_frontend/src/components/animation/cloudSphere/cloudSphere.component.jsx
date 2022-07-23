@@ -52,11 +52,5 @@ export const AnimatedSphere = () => {
         });
     }, [myTags]);
 
-    return (
-        <>
-            <div className="cloudSphere-container ">
-                <span className="content"></span>
-            </div>
-        </>
-    );
+    return <span className="content"></span>;
 };
