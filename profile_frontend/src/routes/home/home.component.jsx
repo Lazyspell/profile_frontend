@@ -7,8 +7,7 @@ import "./home.style.scss";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const { fullName } = useContext(ProfileContext);
-    const { first_name, last_name } = fullName;
+    const { firstName, lastName } = useContext(ProfileContext);
 
     return (
         <div className="home-container">
@@ -20,8 +19,8 @@ const Home = () => {
                     <span className="a">I am</span>
                 </h1>
                 <h1 className="text">
-                    <span className="a">{first_name}</span>{" "}
-                    <span className="n">{last_name}</span>{" "}
+                    <span className="a">{firstName}</span>{" "}
+                    <span className="n">{lastName}</span>{" "}
                 </h1>
                 <h1 className="type">
                     <TextAnimation />
