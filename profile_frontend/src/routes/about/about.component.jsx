@@ -7,13 +7,13 @@ export const About = () => {
     return (
         <>
             <div className="main-container">
-                <div class="split left">
-                    <div class="centered"></div>
+                <div className="split left">
+                    <div className="centered"></div>
                 </div>
 
-                <div class="split right">
-                    <div class="centered">
-                        <AnimatedSphere class="test" />
+                <div className="split right">
+                    <div className="centered">
+                        <AnimatedSphere className="test" />
                     </div>
                 </div>
             </div>
