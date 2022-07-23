@@ -1,8 +1,7 @@
-import { Navbar, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Navbar, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Popup from "reactjs-popup";
 import {
     solid,
     regular,
@@ -11,24 +10,28 @@ import {
 } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
 
 import "./navigation.scss";
+import { useContext } from "react";
+import { ProfileContext } from "../../contexts/profile.context";
 
 const home = " Home";
 const about = " About";
 const work = " Work";
-const contact = " Contact";
+const contactString = " Contact";
 const skills = " My Skills";
 
 const Navigation = () => {
+    const { contact } = useContext(ProfileContext);
+    const { github, linkedin, discord } = contact;
     const navigateToGit = () => {
-        window.open("https://github.com/lazyspell");
+        window.open(github);
     };
 
     const navigateToLinkedIn = () => {
-        window.open("https://linkedin.com/in/jeremy-elam-7a5480102");
+        window.open(linkedin);
     };
 
     const navigateToDiscord = () => {
-        window.open("https://discord.gg/9CKfr9jQnd");
+        window.open(discord);
     };
     return (
         <>
@@ -57,21 +60,13 @@ const Navigation = () => {
                     </ListGroupItem>
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/about" color="black">
-                            <Popup
-                                trigger={
-                                    <FontAwesomeIcon
-                                        icon={duotone("user-bounty-hunter")}
-                                        className="link"
-                                        onClick={() => {
-                                            console.log("This is the way");
-                                        }}
-                                    />
-                                }
-                                position="top left"
-                                nested
-                            >
-                                This is the way
-                            </Popup>
+                            <FontAwesomeIcon
+                                icon={duotone("user-bounty-hunter")}
+                                className="link"
+                                onClick={() => {
+                                    console.log("This is the way");
+                                }}
+                            />
                             <span className="link">{about}</span>
                         </Link>
                     </ListGroupItem>
@@ -130,7 +125,7 @@ const Navigation = () => {
                                     console.log("Contact");
                                 }}
                             >
-                                {contact}
+                                {contactString}
                             </span>
                         </Link>
                     </ListGroupItem>
