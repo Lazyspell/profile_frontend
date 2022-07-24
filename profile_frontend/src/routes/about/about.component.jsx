@@ -8,7 +8,7 @@ export const About = () => {
         <>
             <div className="main-container">
                 <div className="split left">
-                    <div className="centered"></div>
+                    <div className="adjust-center"></div>
                 </div>
 
                 <div className="split right">
