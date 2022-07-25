@@ -66,8 +66,7 @@
 .adjust-center {
     position: absolute;
     top: 25%;
-    text-align: left;
-    border: 1px solid rgb(170, 0, 255);
+    // border: 1px solid rgb(170, 0, 255);
     width: 99%;
     right: 1px;
     height: 50%;
@@ -84,11 +83,23 @@
     color: white;
     font-weight: bold;
     font-family: "Oswald", sans-serif;
-    font-size: 700%;
+    font-size: 500%;
 }
 
 .text-message {
     color: white;
     font-family: "Oswald", sans-serif;
-    font-size: 200%;
+    font-size: 150%;
+}
+
+.about-header {
+    display: flex;
+    width: 95%;
+    float: right;
+}
+
+.about-message {
+    display: flex;
+    width: 90%;
+    float: right;
 }
