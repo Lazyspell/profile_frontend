@@ -8,7 +8,13 @@ export const About = () => {
         <>
             <div className="main-container">
                 <div className="split left">
-                    <div className="adjust-center"></div>
+                    <div className="adjust-center">
+                        <h1 className="text-header">Me, Myself, & I</h1>
+                        <br />
+                        <p className="text-message">
+                            Messages \n Another message
+                        </p>
+                    </div>
                 </div>
 
                 <div className="split right">
