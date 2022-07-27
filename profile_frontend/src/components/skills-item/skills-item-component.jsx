@@ -15,7 +15,7 @@ export const SkillItem = ({ inputSkills }) => {
             <div
                 className="background-image"
                 style={{
-                    backgroundImage: `url(${image_link})`,
+                    backgroundImage: `url(${"https://www.freepnglogos.com/uploads/javascript-png/javascript-nodejs-logo-27.png"})`,
                 }}
             />
             <div className="skills-body">

@@ -1,6 +1,6 @@
 .skill-item-container {
     min-width: 30%;
-    height: 240px;
+    height: 340px;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
@@ -37,7 +37,8 @@
     .background-image {
         width: 100%;
         height: 100%;
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: auto;
         background-position: center;
     }
 
@@ -53,19 +54,22 @@
             align-items: center;
             font-weight: bold;
             margin: 0 6px 0;
-            font-size: 22px;
-            color: white;
+            font-size: 26px;
+            color: Black;
+            text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
         }
 
         p {
-            font-weight: lighter;
             font-size: 16px;
+
             color: white;
         }
         span {
             color: white;
-            bottom: 0;
-            left: 0;
+
+            bottom: 100%;
+            left: 100%;
         }
     }
 }
