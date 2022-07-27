@@ -21,7 +21,6 @@ export const ProfileProvider = ({ children }) => {
         },
     });
 
-    console.log(data);
     useEffect(() => {
         if (data) {
             const {
