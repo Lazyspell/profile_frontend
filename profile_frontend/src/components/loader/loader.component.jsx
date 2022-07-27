@@ -1,4 +1,4 @@
-import "./loader.component.scss";
+import "./loader.styles.scss";
 
 export const Loader = () => {
     return (
