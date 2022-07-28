@@ -1,7 +1,4 @@
 import "./about.styles.scss";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { AnimatedSphere } from "../../components/animation/cloudSphere/cloudSphere.component";
 import { useContext } from "react";
 import { ProfileContext } from "../../contexts/profile.context";

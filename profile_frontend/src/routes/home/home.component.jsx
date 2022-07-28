@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { TextAnimation } from "../../components/animation/textAnimation/text.animation";
 import { ProfileContext } from "../../contexts/profile.context";
 import { Button } from "../../components/button/button.component";
