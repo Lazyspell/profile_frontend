@@ -19,6 +19,7 @@ export const GET_PROFILE_BY_ID = gql`
             skills {
                 tech_name
                 tech_link
+                image_url
                 years_of_experience
                 tech_description
             }
