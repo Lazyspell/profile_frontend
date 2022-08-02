@@ -14,7 +14,7 @@ export const SkillItem = ({ inputSkills }) => {
             />
             <div className="skills-body">
                 <h2>{tech_name}</h2>
-                <div> {tech_description}</div>
+                <p> {tech_description}</p>
                 <span>Years of Experience: {years_of_experience}</span>
             </div>
         </div>
