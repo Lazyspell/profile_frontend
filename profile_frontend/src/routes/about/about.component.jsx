@@ -8,7 +8,7 @@ export const About = () => {
     const { about_my_career } = contact;
     return (
         <>
-            <div className="main-container">
+            <div className="about-main-container">
                 <div className="split left">
                     <div className="adjust-center">
                         <div className="about-header">
