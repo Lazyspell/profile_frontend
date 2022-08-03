@@ -7,6 +7,7 @@ export const Skills = () => {
     const { skills } = useContext(ProfileContext);
     return (
         <div className="skills-container">
+            <h1>Skills and Experience</h1>
             <SkillsContainer skills={skills} />
         </div>
     );
