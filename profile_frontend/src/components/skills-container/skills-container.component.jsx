@@ -1,4 +1,4 @@
-import { SkillItem } from "../skills-item/skills-item-component.jsx";
+import { SkillItem } from "../skills-item/skills-item.component.jsx";
 import "./skills-container.styles.scss";
 
 export const SkillsContainer = ({ skills }) => {

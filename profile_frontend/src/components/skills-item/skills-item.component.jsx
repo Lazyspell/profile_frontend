@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
-import { Button } from "../../components/button/button.component";
+import { Button } from "../button/button.component";
 
 export const SkillItem = ({ inputSkills }) => {
     const { tech_name, years_of_experience, tech_description, image_url } =
