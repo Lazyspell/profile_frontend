@@ -5,7 +5,7 @@ import "./skills-container.styles.scss";
 
 export const SkillsContainer = ({ skills }) => {
     return (
-        <Carousel>
+        <Carousel className="skill-container">
             {skills.map((skill, index) => (
                 <SkillItem key={index + 1} inputSkills={skill} />
             ))}
