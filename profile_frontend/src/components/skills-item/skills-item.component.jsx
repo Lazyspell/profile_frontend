@@ -12,7 +12,7 @@ export const SkillItem = ({ inputSkills }) => {
         inputSkills;
     console.log(inputSkills);
     return (
-        <Card sx={{ maxWidth: 300 }} style={{ backgroundColor: "black" }}>
+        <Card sx={{ maxWidth: 400 }} style={{ backgroundColor: "black" }}>
             <CardMedia
                 component="img"
                 height="140"
