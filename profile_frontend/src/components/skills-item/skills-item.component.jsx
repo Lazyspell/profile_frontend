@@ -15,7 +15,7 @@ export const SkillItem = ({ inputSkills }) => {
         <Card sx={{ maxWidth: 400 }} style={{ backgroundColor: "black" }}>
             <CardMedia
                 component="img"
-                height="140"
+                height="300"
                 image={image_url}
                 alt={tech_name}
                 style={{ backgroundColor: "black" }}
