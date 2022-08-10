@@ -17,11 +17,34 @@ export const GET_PROFILE_BY_ID = gql`
                 zip_code
             }
             skills {
-                tech_name
-                tech_link
-                image_url
-                years_of_experience
-                tech_description
+                frontend {
+                    tech_name
+                    tech_link
+                    tech_description
+                    image_url
+                    years_of_experience
+                }
+                backend {
+                    tech_name
+                    tech_link
+                    tech_description
+                    image_url
+                    years_of_experience
+                }
+                machine_learning {
+                    tech_name
+                    tech_link
+                    tech_description
+                    image_url
+                    years_of_experience
+                }
+                cloud_service {
+                    tech_name
+                    tech_link
+                    tech_description
+                    image_url
+                    years_of_experience
+                }
             }
             projects {
                 project_name
