@@ -10,7 +10,6 @@ import { Button } from "../button/button.component";
 export const SkillItem = ({ inputSkills }) => {
     const { tech_name, years_of_experience, tech_description, image_url } =
         inputSkills;
-    console.log(inputSkills);
     return (
         <Card sx={{ maxWidth: 400 }} style={{ backgroundColor: "black" }}>
             <CardMedia
