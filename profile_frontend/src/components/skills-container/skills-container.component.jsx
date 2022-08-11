@@ -5,35 +5,31 @@ import "./skills-container.styles.scss";
 
 export const SkillsContainer = ({ skills }) => {
     const { frontend, backend, machine_learning, cloud_service } = skills;
+    const categories = [backend, frontend, machine_learning, cloud_service];
+
     return (
         <>
-            <h1>Backend</h1>
-            <Carousel className="skill-container">
-                {backend.map((skill, index) => (
-                    <SkillItem key={index + 1} inputSkills={skill} />
-                ))}
-            </Carousel>
-
-            <h1>Frontend</h1>
-            <Carousel className="skill-container">
-                {frontend.map((skill, index) => (
-                    <SkillItem key={index + 1} inputSkills={skill} />
-                ))}
-            </Carousel>
-
-            <h1>Machine Learning</h1>
-            <Carousel className="skill-container">
-                {machine_learning.map((skill, index) => (
-                    <SkillItem key={index + 1} inputSkills={skill} />
-                ))}
-            </Carousel>
-
-            <h1>Cloud Service</h1>
-            <Carousel className="skill-container">
-                {cloud_service.map((skill, index) => (
-                    <SkillItem key={index + 1} inputSkills={skill} />
-                ))}
-            </Carousel>
+            {categories.map((item) => (
+                <div className="skill-div">
+                    <div className="category">
+                        <h1 className="skill-title">
+                            Skill - {item[0].category.toUpperCase()}
+                        </h1>
+                        <Carousel className="skill-container">
+                            {item.map((skill, index) => (
+                                <SkillItem
+                                    key={index + 1}
+                                    inputSkills={skill}
+                                />
+                            ))}
+                        </Carousel>
+                    </div>
+                    <div>
+                        <h1>Experience</h1>
+                        <p>place holder</p>
+                    </div>
+                </div>
+            ))}
         </>
     );
 };
