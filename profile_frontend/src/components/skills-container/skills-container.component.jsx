@@ -9,8 +9,8 @@ export const SkillsContainer = ({ skills }) => {
 
     return (
         <>
-            {categories.map((item) => (
-                <div className="skill-div">
+            {categories.map((item, index) => (
+                <div className="skill-div" key={index}>
                     <div className="category">
                         <h1 className="skill-title">
                             Skill - {item[0].category.toUpperCase()}
@@ -26,7 +26,7 @@ export const SkillsContainer = ({ skills }) => {
                     </div>
                     <div>
                         <h1>Experience</h1>
-                        <p>place holder</p>
+                        <p>{item[0].category_description}</p>
                     </div>
                 </div>
             ))}
