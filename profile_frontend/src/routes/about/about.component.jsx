@@ -15,7 +15,12 @@ export const About = () => {
                             <h1 className="text-header">Me, Myself, & I</h1>
                         </div>
                         <div className="about-message">
-                            <p className="text-message">{about_my_career}</p>
+                            <div
+                                className="text-message"
+                                dangerouslySetInnerHTML={{
+                                    __html: about_my_career,
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
