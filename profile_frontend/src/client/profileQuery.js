@@ -24,6 +24,7 @@ export const GET_PROFILE_BY_ID = gql`
                     image_url
                     years_of_experience
                     category
+                    category_description
                 }
                 backend {
                     tech_name
@@ -32,6 +33,7 @@ export const GET_PROFILE_BY_ID = gql`
                     image_url
                     years_of_experience
                     category
+                    category_description
                 }
                 machine_learning {
                     tech_name
@@ -40,6 +42,7 @@ export const GET_PROFILE_BY_ID = gql`
                     image_url
                     years_of_experience
                     category
+                    category_description
                 }
                 cloud_service {
                     tech_name
@@ -48,6 +51,7 @@ export const GET_PROFILE_BY_ID = gql`
                     image_url
                     years_of_experience
                     category
+                    category_description
                 }
             }
             projects {
