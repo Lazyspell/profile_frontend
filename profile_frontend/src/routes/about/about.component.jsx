@@ -10,10 +10,11 @@ export const About = () => {
         <>
             <div className="about-main-container">
                 <div className="split left">
+                    <div className="about-title-container">
+                        <h1 className="text-header">Me, Myself, & I</h1>
+                    </div>
                     <div className="adjust-center">
-                        <div className="about-header">
-                            <h1 className="text-header">Me, Myself, & I</h1>
-                        </div>
+                        <div className="about-header"></div>
                         <div className="about-message">
                             <div
                                 className="text-message"
@@ -23,6 +24,7 @@ export const About = () => {
                             />
                         </div>
                     </div>
+                    <div className="about-quotes-container">test message</div>
                 </div>
 
                 <div className="split right">
