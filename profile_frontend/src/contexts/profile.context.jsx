@@ -12,6 +12,7 @@ export const ProfileContext = createContext({
     projects: [],
     contact: {},
     experience: [],
+    quotes: [],
 });
 
 export const ProfileProvider = ({ children }) => {
@@ -33,6 +34,7 @@ export const ProfileProvider = ({ children }) => {
                     projects,
                     contact,
                     experience,
+                    quotes,
                 },
             } = data;
 
@@ -44,6 +46,7 @@ export const ProfileProvider = ({ children }) => {
             setProjects(projects);
             setContact(contact);
             setExperience(experience);
+            setQuotes(quotes);
         }
     }, [data]);
 
@@ -55,6 +58,7 @@ export const ProfileProvider = ({ children }) => {
     const [projects, setProjects] = useState([]);
     const [contact, setContact] = useState({});
     const [experience, setExperience] = useState([]);
+    const [quotes, setQuotes] = useState([]);
 
     const value = {
         firstName,
@@ -65,6 +69,7 @@ export const ProfileProvider = ({ children }) => {
         projects,
         contact,
         experience,
+        quotes,
     };
 
     if (loading) return "Loading...";
