@@ -76,6 +76,11 @@ export const GET_PROFILE_BY_ID = gql`
                 work_description
                 tech_used
             }
+            quotes {
+                saying
+                source
+                source_link
+            }
         }
     }
 `;
