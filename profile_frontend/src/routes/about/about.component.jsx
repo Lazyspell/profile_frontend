@@ -2,10 +2,12 @@ import "./about.styles.scss";
 import { AnimatedSphere } from "../../components/animation/cloudSphere/cloudSphere.component";
 import { useContext } from "react";
 import { ProfileContext } from "../../contexts/profile.context";
+import { QuotesContainer } from "../../components/quotes-container/quotes-container.component";
 
 export const About = () => {
     const { contact } = useContext(ProfileContext);
     const { about_my_career } = contact;
+    const { quotes } = useContext(ProfileContext);
     return (
         <>
             <div className="about-main-container">
@@ -24,7 +26,9 @@ export const About = () => {
                             />
                         </div>
                     </div>
-                    <div className="about-quotes-container">test message</div>
+                    <div className="about-quotes-container">
+                        <QuotesContainer quotes={quotes} className="test" />
+                    </div>
                 </div>
 
                 <div className="split right">
