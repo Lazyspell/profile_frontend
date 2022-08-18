@@ -6,8 +6,7 @@ export const Contact = () => {
     return (
         <>
             <div className="contact-container">
-                Contact Page
-                <div>
+                <div className="right">
                     <MyComponent />
                 </div>
             </div>
