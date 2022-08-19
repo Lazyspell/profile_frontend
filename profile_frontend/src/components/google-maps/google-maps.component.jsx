@@ -1,5 +1,13 @@
 import React from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { useState, useCallback } from "react";
+import {
+    GoogleMap,
+    useJsApiLoader,
+    withScriptjs,
+    withGoogleMap,
+} from "@react-google-maps/api";
+
+const styles = require("./GoogleMapStyles.json");
 
 const containerStyle = {
     width: "100%",
@@ -11,20 +19,20 @@ const center = {
     lng: -117.97279,
 };
 
-function MyComponent() {
+function GoogleMapComponent() {
     const { isLoaded } = useJsApiLoader({
         id: "google-map-script",
         googleMapsApiKey: "AIzaSyA3SAtBRKnfdzRwDjkzxD8fv713hu0llF0",
     });
 
-    const [map, setMap] = React.useState(null);
+    const [map, setMap] = useState(null);
 
-    const onLoad = React.useCallback(function callback(map) {
+    const onLoad = useCallback(function callback(map) {
         map.setZoom(12);
         setMap(map);
     }, []);
 
-    const onUnmount = React.useCallback(function callback(map) {
+    const onUnmount = useCallback(function callback(map) {
         setMap(null);
     }, []);
 
@@ -34,6 +42,7 @@ function MyComponent() {
             center={center}
             onLoad={onLoad}
             onUnmount={onUnmount}
+            options={{ styles: styles }}
         >
             {/* Child components, such as markers, info windows, etc. */}
             <></>
@@ -43,4 +52,4 @@ function MyComponent() {
     );
 }
 
-export default MyComponent;
+export default GoogleMapComponent;
