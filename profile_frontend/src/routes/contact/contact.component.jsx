@@ -1,4 +1,4 @@
-import MyComponent from "../../components/google-maps/google-maps.component";
+import GoogleMapComponent from "../../components/google-maps/google-maps.component";
 import "./contact.styles.scss";
 export const Contact = () => {
     console.log(process.env);
@@ -7,7 +7,7 @@ export const Contact = () => {
         <>
             <div className="contact-container">
                 <div className="right">
-                    <MyComponent />
+                    <GoogleMapComponent />
                 </div>
             </div>
         </>
