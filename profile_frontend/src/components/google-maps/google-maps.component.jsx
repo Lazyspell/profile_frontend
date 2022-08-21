@@ -5,6 +5,7 @@ import {
     useJsApiLoader,
     withScriptjs,
     withGoogleMap,
+    Marker,
 } from "@react-google-maps/api";
 
 const styles = require("./GoogleMapStyles.json");
@@ -19,7 +20,7 @@ const center = {
     lng: -117.97279,
 };
 
-function GoogleMapComponent() {
+const GoogleMapComponent = () => {
     const { isLoaded } = useJsApiLoader({
         id: "google-map-script",
         googleMapsApiKey: "AIzaSyA3SAtBRKnfdzRwDjkzxD8fv713hu0llF0",
@@ -46,10 +47,11 @@ function GoogleMapComponent() {
         >
             {/* Child components, such as markers, info windows, etc. */}
             <></>
+            <Marker key="marker_1" position={{ lat: 33.709, lng: -117.9544 }} />
         </GoogleMap>
     ) : (
         <></>
     );
-}
+};
 
 export default GoogleMapComponent;
