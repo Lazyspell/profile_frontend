@@ -11,7 +11,6 @@ export const EmailForum = () => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-    const [emailSent, setEmailSent] = useState(false);
 
     const nameChange = (event) => {
         setName(event.target.value);
@@ -26,7 +25,7 @@ export const EmailForum = () => {
         setMessage(event.target.value);
     };
 
-    const [submitEmail, { data, loading, error }] = useMutation(SEND_EMAIL, {
+    const [submitEmail, { loading, error }] = useMutation(SEND_EMAIL, {
         variables: {
             input: {
                 email_name: name,
@@ -42,10 +41,6 @@ export const EmailForum = () => {
             setMessage("");
         },
     });
-
-    const clearField = () => {
-        setName("");
-    };
 
     if (loading) {
         return "Submitting...";
