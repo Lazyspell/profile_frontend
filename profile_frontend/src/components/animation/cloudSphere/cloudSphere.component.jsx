@@ -15,6 +15,7 @@ export const AnimatedSphere = () => {
         "GO",
         "Git",
         "Flask",
+        "FastAPI",
         "Node.js",
         "OpenCV",
         "SQL",
