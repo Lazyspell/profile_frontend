@@ -16,7 +16,6 @@ export const About = () => {
                         <h1 className="text-header">Me, Myself, & I</h1>
                     </div>
                     <div className="adjust-center">
-                        <div className="about-header"></div>
                         <div className="about-message">
                             <div
                                 className="text-message"
