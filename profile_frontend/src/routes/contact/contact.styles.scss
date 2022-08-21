@@ -14,14 +14,49 @@
     overflow-x: auto;
 }
 
-.left {
-    left: 200px;
+.contact-left {
+    padding: 15px;
+    width: 45%;
+    height: 100%;
+    float: left;
+    display: grid;
+    place-items: center;
 }
 
-.right {
+.contact-right {
     width: 55%;
     justify-content: center;
     align-items: center;
     float: right;
     overflow: auto;
+}
+
+.contact-center-left {
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+}
+
+.forum-input {
+    background-color: white;
+}
+
+.contact-text-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contact-subject-field {
+    padding: 10px 0px 0px 0px; //top right bottom left
+}
+
+.contact-text-field {
+    padding: 10px 0px 0px 0px; //top right bottom left
+}
+
+.contact-button {
+    padding: 10px;
+    width: 100%;
+    float: right;
 }
