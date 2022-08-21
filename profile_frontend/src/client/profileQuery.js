@@ -1,5 +1,11 @@
 import gql from "graphql-tag";
 
+export const SEND_EMAIL = gql`
+    mutation sendEmail($input: InputExternalEmail!) {
+        sendEmail(input: $input)
+    }
+`;
+
 export const GET_PROFILE_BY_ID = gql`
     query findProfiles($email: String!) {
         profileId(email: $email) {
