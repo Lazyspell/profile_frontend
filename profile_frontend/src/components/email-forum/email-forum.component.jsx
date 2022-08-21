@@ -11,6 +11,7 @@ export const EmailForum = () => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+    const [emailSent, setEmailSent] = useState(false);
 
     const nameChange = (event) => {
         setName(event.target.value);
@@ -24,14 +25,8 @@ export const EmailForum = () => {
     const messageChange = (event) => {
         setMessage(event.target.value);
     };
-    const emailObject = {
-        email_name: name,
-        email_address: email,
-        email_subject: subject,
-        email_message: message,
-    };
 
-    const [testButton, { data, loading, error }] = useMutation(SEND_EMAIL, {
+    const [submitEmail, { data, loading, error }] = useMutation(SEND_EMAIL, {
         variables: {
             input: {
                 email_name: name,
@@ -40,11 +35,21 @@ export const EmailForum = () => {
                 email_message: message,
             },
         },
+        onCompleted() {
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+        },
     });
 
-    if (loading) return "Submitting...";
+    const clearField = () => {
+        setName("");
+    };
 
-    console.log(data);
+    if (loading) {
+        return "Submitting...";
+    }
 
     return (
         <>
@@ -94,7 +99,7 @@ export const EmailForum = () => {
                 />
             </div>
             <div className="contact-button">
-                <Button onClick={testButton}>Send Message</Button>
+                <Button onClick={submitEmail}>Send Message</Button>
             </div>
         </>
     );
