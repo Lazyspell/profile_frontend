@@ -193,7 +193,16 @@
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#8a8a8a"
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
             }
         ]
     },
