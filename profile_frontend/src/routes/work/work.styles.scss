@@ -5,4 +5,22 @@
     background-color: rgba(10, 10, 10, 0.929);
     height: 100%;
     top: 0;
+
+    .work-left {
+        height: 100%;
+        float: left;
+        display: grid;
+        border: 15px solid red;
+        width: 45%;
+        overflow: auto;
+    }
+
+    .work-right {
+        height: 100%;
+        float: left;
+        display: grid;
+        border: 15px solid blue;
+        width: 45%;
+        overflow: auto;
+    }
 }
