@@ -8,6 +8,30 @@ export const About = () => {
     const { contact } = useContext(ProfileContext);
     const { about_my_career } = contact;
     const { quotes } = useContext(ProfileContext);
+    const myTags = [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "React",
+        "Python",
+        "Pandas",
+        "Tensorflow",
+        "GO",
+        "Git",
+        "Flask",
+        "FastAPI",
+        "Node.js",
+        "OpenCV",
+        "SQL",
+        "NoSQL",
+        "PostgresDB",
+        "MongoDB",
+        "REST",
+        "GraphQL",
+        "Digital Ocean",
+        "AWS",
+        "Azure",
+    ];
     return (
         <>
             <div className="about-main-container">
@@ -32,7 +56,11 @@ export const About = () => {
 
                 <div className="split right">
                     <div className="centered">
-                        <AnimatedSphere className="test" />
+                        <AnimatedSphere
+                            techList={myTags}
+                            radius={335}
+                            className="test"
+                        />
                     </div>
                 </div>
             </div>
