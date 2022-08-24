@@ -1,12 +1,6 @@
 import React from "react";
 import { useState, useCallback } from "react";
-import {
-    GoogleMap,
-    useJsApiLoader,
-    withScriptjs,
-    withGoogleMap,
-    Marker,
-} from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 const styles = require("./GoogleMapStyles.json");
 
