@@ -1,38 +1,14 @@
 import { useEffect } from "react";
 import TagCloud from "TagCloud";
+import { useState } from "react";
 
 import "./cloudSphere.animation.scss";
 
-export const AnimatedSphere = () => {
-    const myTags = [
-        "JavaScript",
-        "CSS",
-        "HTML",
-        "React",
-        "Python",
-        "Pandas",
-        "Tensorflow",
-        "GO",
-        "Git",
-        "Flask",
-        "FastAPI",
-        "Node.js",
-        "OpenCV",
-        "SQL",
-        "NoSQL",
-        "PostgresDB",
-        "MongoDB",
-        "REST",
-        "GraphQL",
-        "Digital Ocean",
-        "AWS",
-        "Azure",
-    ];
-
+export const AnimatedSphere = ({ techList, radius }) => {
     useEffect(() => {
-        TagCloud(".content", myTags, {
+        TagCloud(".content", techList, {
             // radius in px
-            radius: 325,
+            radius: radius,
             // animation speed
             // slow, normal, fast
             maxSpeed: "fast",
@@ -51,7 +27,7 @@ export const AnimatedSphere = () => {
             useContainerInlineStyles: true,
             // sectionContainer: "about",
         });
-    }, [myTags]);
+    }, [techList]);
 
     return <span className="content"></span>;
 };
