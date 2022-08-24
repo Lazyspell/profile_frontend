@@ -3,7 +3,10 @@ import "./work.styles.scss";
 export const Work = () => {
     return (
         <>
-            <h1 className="work-container">Work Page</h1>
+            <div className="work-container">
+                <div className="work-left"></div>
+                <div className="work-right"></div>
+            </div>
         </>
     );
 };
