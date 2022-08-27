@@ -9,7 +9,11 @@ export const WorkContainer = ({ experiences }) => {
                 <h1>Work Experience</h1>
 
                 {experiences.map((experience, index) => (
-                    <WorkItem key={index + 1} inputWork={experience} />
+                    <WorkItem
+                        key={index + 1}
+                        inputWork={experience}
+                        className="work-component"
+                    />
                 ))}
             </div>
         </>
