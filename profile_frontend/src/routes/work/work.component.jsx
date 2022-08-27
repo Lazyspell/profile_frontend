@@ -1,4 +1,4 @@
-import { WorkContainer } from "../../components/work-container/work-container.styles";
+import { WorkContainer } from "../../components/work-container/work-container.component";
 import { ProfileContext } from "../../contexts/profile.context";
 import { useContext } from "react";
 
@@ -10,7 +10,10 @@ export const Work = () => {
         <>
             <div className="work-container">
                 <div className="work-left">
-                    <WorkContainer experiences={experience} />
+                    <WorkContainer
+                        experiences={experience}
+                        className="work-component"
+                    />
                 </div>
                 <div className="work-right"></div>
             </div>
