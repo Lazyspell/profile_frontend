@@ -11,42 +11,49 @@ export const WorkItem = ({ inputWork }) => {
         inputWork;
 
     return (
-        <Card sx={{ maxWidth: 400 }} style={{ backgroundColor: "black" }}>
-            <Typography
-                variant="h4"
-                component="div"
-                color="white"
-                style={{ backgroundColor: "black" }}
-            >
-                {company_name}
-            </Typography>
+        <Card sx={{ maxWidth: "100%" }} style={{ backgroundColor: "black" }}>
+            <div className="work-card">
+                <div className="work-item-left">
+                    <Typography
+                        variant="h4"
+                        component="div"
+                        color="white"
+                        style={{ backgroundColor: "black" }}
+                    >
+                        {company_name}
+                    </Typography>
 
-            <Typography
-                variant="body"
-                component="div"
-                color="white"
-                style={{ backgroundColor: "black" }}
-            >
-                {work_description}
-            </Typography>
+                    <Typography
+                        variant="body"
+                        component="div"
+                        color="white"
+                        style={{ backgroundColor: "black" }}
+                    >
+                        Years Worked: {years_worked}
+                    </Typography>
 
-            <Typography
-                variant="body"
-                component="div"
-                color="white"
-                style={{ backgroundColor: "black" }}
-            >
-                Years Worked: {years_worked}
-            </Typography>
-            <Typography
-                variant="body"
-                component="div"
-                color="white"
-                style={{ backgroundColor: "black" }}
-            >
-                Technology Used:{" "}
-                <AnimatedSphere techList={tech_used} radius={100} />
-            </Typography>
+                    <Typography
+                        variant="body"
+                        component="div"
+                        color="white"
+                        style={{ backgroundColor: "black" }}
+                    >
+                        Description: {work_description}
+                    </Typography>
+                </div>
+
+                <div className="work-item-right">
+                    <Typography
+                        variant="body"
+                        component="div"
+                        color="white"
+                        style={{ backgroundColor: "black" }}
+                    >
+                        Technology Used:{tech_used.length}
+                        <AnimatedSphere techList={tech_used} radius={150} />
+                    </Typography>
+                </div>
+            </div>
         </Card>
     );
 };
