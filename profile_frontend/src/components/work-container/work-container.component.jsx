@@ -2,7 +2,6 @@ import { WorkItem } from "../work-item/work-item.component";
 import "./work-container.styles.scss";
 
 export const WorkContainer = ({ experiences }) => {
-    console.log(experiences);
     return (
         <>
             <div>
