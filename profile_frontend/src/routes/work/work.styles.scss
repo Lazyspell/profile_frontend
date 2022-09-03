@@ -19,8 +19,12 @@
         height: 100%;
         float: left;
         display: grid;
-        border: 15px solid blue;
+        border: 10px solid rgba(106, 0, 255, 0.356);
         width: 45%;
         overflow: auto;
+
+        .salt {
+            display: grid;
+        }
     }
 }
