@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export const client = new ApolloClient({
-    uri: "http://localhost:8080/query",
+    uri: "https://profile-backend-go-tpy8r.ondigitalocean.app/query",
     cache: new InMemoryCache(),
 });
