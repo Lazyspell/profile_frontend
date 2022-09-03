@@ -7,6 +7,9 @@ import "./work.styles.scss";
 
 export const Work = () => {
     const { experience } = useContext(ProfileContext);
+
+    // console.log(experience[0].tech_used);
+
     return (
         <>
             <div className="work-container">
@@ -17,7 +20,9 @@ export const Work = () => {
                     />
                 </div>
                 <div className="work-right">
-                    <TagCloudAnimation />
+                    <div className="salt">
+                        <TagCloudAnimation data={experience[0].tech_used} />
+                    </div>
                 </div>
             </div>
         </>
