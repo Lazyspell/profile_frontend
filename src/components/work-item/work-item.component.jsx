@@ -2,7 +2,6 @@ import "./work-item.styles.scss";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import { AnimatedSphere } from "../animation/cloudSphere/cloudSphere.component";
-import { TagCloudAnimation } from "../animation/tagCloud/tagCloud.component";
 
 export const WorkItem = ({ inputWork }) => {
     const { company_name, years_worked, work_description, tech_used } =
@@ -54,7 +53,6 @@ export const WorkItem = ({ inputWork }) => {
                         >
                             Technology Used:{tech_used.length}
                             <AnimatedSphere techList={tech_used} radius={150} />
-                            <TagCloudAnimation data={tech_used} />
                         </Typography>
                     </div>
                 </div>
