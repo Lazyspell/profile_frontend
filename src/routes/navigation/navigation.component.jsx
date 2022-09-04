@@ -1,13 +1,13 @@
 import { Navbar, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    solid,
-    regular,
-    brands,
-    duotone,
-} from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//     solid,
+//     regular,
+//     brands,
+//     duotone,
+// } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
 
 import "./navigation.scss";
 import { useContext } from "react";
@@ -41,13 +41,13 @@ const Navigation = () => {
 
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/">
-                            <FontAwesomeIcon
+                            {/* <FontAwesomeIcon
                                 icon={faHome}
                                 className="link"
                                 onClick={() => {
                                     console.log("home");
                                 }}
-                            />
+                            /> */}
                             <span
                                 className="link"
                                 onClick={() => {
@@ -60,25 +60,25 @@ const Navigation = () => {
                     </ListGroupItem>
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/about" color="black">
-                            <FontAwesomeIcon
+                            {/* <FontAwesomeIcon
                                 icon={duotone("user-bounty-hunter")}
                                 className="link"
                                 onClick={() => {
                                     console.log("This is the way");
                                 }}
-                            />
+                            /> */}
                             <span className="link">{about}</span>
                         </Link>
                     </ListGroupItem>
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/skills">
-                            <FontAwesomeIcon
+                            {/* <FontAwesomeIcon
                                 icon={regular("sword-laser")}
                                 className="link"
                                 onClick={() => {
                                     console.log("This is the way");
                                 }}
-                            />
+                            /> */}
                             <span
                                 className="link"
                                 onClick={() => {
@@ -92,13 +92,13 @@ const Navigation = () => {
 
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/work">
-                            <FontAwesomeIcon
+                            {/* <FontAwesomeIcon
                                 icon={solid("book-journal-whills")}
                                 className="link"
                                 onClick={() => {
                                     console.log("May the force be with you");
                                 }}
-                            />
+                            /> */}
                             <span
                                 className="link"
                                 onClick={() => {
@@ -112,13 +112,13 @@ const Navigation = () => {
 
                     <ListGroupItem className="list">
                         <Link className="nav-link" to="/contact">
-                            <FontAwesomeIcon
+                            {/* <FontAwesomeIcon
                                 icon={solid("alien-8bit")}
                                 className="link"
                                 onClick={() => {
                                     console.log("Contact");
                                 }}
-                            />
+                            /> */}
                             <span
                                 className="link"
                                 onClick={() => {
@@ -132,23 +132,23 @@ const Navigation = () => {
                     <div className="spacing"></div>
 
                     <ListGroupItem className="list">
-                        <FontAwesomeIcon
+                        {/* <FontAwesomeIcon
                             icon={brands("linkedin")}
                             className="link"
                             onClick={navigateToLinkedIn}
-                        />
+                        /> */}
                         {"   "}
-                        <FontAwesomeIcon
+                        {/* <FontAwesomeIcon
                             icon={brands("github")}
                             className="link"
                             onClick={navigateToGit}
-                        />
+                        /> */}
                         {"   "}
-                        <FontAwesomeIcon
+                        {/* <FontAwesomeIcon
                             icon={brands("discord")}
                             className="link"
                             onClick={navigateToDiscord}
-                        />
+                        /> */}
                     </ListGroupItem>
                 </ListGroup>
             </Navbar>
